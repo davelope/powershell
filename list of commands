@@ -64,4 +64,18 @@ get-help get-service -online
 #memunculkan semua command yg ada di powershell
 get-command
 
+#butuh help dengan about
+get-help about_aliases
+
+#semacam filtering terhadap outputnya
+#output tergantung pada command yg kita eksekusi, dalam hal ini ada status, name, dan displayname
+#dalam contoh ini, status difilter dengan equal stopped
+get-service | where-object {$_.status -eq "stopped"}
+
+#untuk melihat anggota dari suatu command
+#dalam hal ini untuk melihat anggota dari get-service
+get-service | get-member
+
+#contoh filtering lagi, kali ini pada get-command
+get-command | where-object {$_.status -eq "Function"}
 
