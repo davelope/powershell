@@ -1,0 +1,5 @@
+#menghasilkan output yg sama
+dir
+Get-ChildItem
+
+#
