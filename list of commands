@@ -2,6 +2,9 @@
 dir
 Get-ChildItem
 
+#contoh aliases yg lain
+dir, gci, ls
+
 #get sebagai verb, service sebagai noun
 #-name sebagai name, "*net*" sebagai argument string
 #get-service disebut command, -name "*net*" disebut parameter
@@ -49,5 +52,16 @@ get-help get-service -example
 #ini juga bisa
 get-help get-service -examples
 
+#kalau butuh help dan contohnya lebih detail
+get-help get-service -detailed
+
+#kalau butuh help dengan full , dilengkapi related links
+get-help get-service -full
+
+#kalau mau help dibuka di browser alias online
+get-help get-service -online
+
+#memunculkan semua command yg ada di powershell
+get-command
 
 
