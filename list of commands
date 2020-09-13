@@ -1,5 +1,53 @@
-#menghasilkan output yg sama
+#menghasilkan output yg sama, disebut dengan aliases
 dir
 Get-ChildItem
 
-#
+#get sebagai verb, service sebagai noun
+#-name sebagai name, "*net*" sebagai argument string
+#get-service disebut command, -name "*net*" disebut parameter
+get-service -name "*net*"
+
+#bisa get-service aja untuk lihat semuanya
+get-service
+
+#property names adalah header column
+#property values adalah nilai didalam column tersebut
+#powershell tidak case sensitive, jadi penulisan uppercase atau lowercase akan menghasilkan output yang sama saja
+#powershell are singular, not plural, contoh: get-service adalah benar, get-services adalah salah (akan error)
+#pipe command "|" is used
+
+#mengeluarkan mungkin registry, pada direktori tempat kita berada sekarang, atau bisa disetting juga directory-nya
+#ini contohnya kita beri nama "services.txt"
+#jadi fungsi piping adalah mengeksekusi command berikutnya, dalam hal ini kita get-service, kemudian dikeluarkan dalam services.txt
+#power of the pipe terbukti disini
+get-service | out-file services.txt
+
+#powershell ketika dijalankan sebagai Administrator atau "Run as Administrator"
+#akan berbeda dengan kita jalankan powershell biasa, tidak sebagai administrator
+#perbedaan terletak pada direktori default kita, yg Administrator sebagai system32
+#yg biasa sebagai User
+
+#untuk clear directory
+cd\
+
+#untuk clear command / output sebelumnya, tanpa merubah directory kita saat ini / sekarang ini
+cls
+
+#syntax auto complete menggunakan TAB
+
+#kalau butuh help
+get-help
+
+#kalau butuh help lebih spesifik
+get-help get-service
+
+#untuk bring back last command
+tekan panah atas satu kali
+
+#kalau butuh help dan contohnya
+get-help get-service -example
+#ini juga bisa
+get-help get-service -examples
+
+
+
